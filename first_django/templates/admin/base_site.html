@@ -1,0 +1,11 @@
+<!-- run "python -c "import django; print(django.__path__)"" in the terminal to find where django lives in the computer -->
+
+{% extends "admin/base.html" %}
+
+{% block title %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %}
+
+{% block branding %}
+<h1 id="site-name"><a href="{% url 'admin:index' %}">Django First Admin</a></h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}

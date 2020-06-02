@@ -3,6 +3,9 @@ from django.contrib import admin
 from .models import Question, Choice
 # Register your models here.
 
+# this overrides the default site_header in the copied template
+admin.site.site_header = 'My First Django Admin'
+
 class ChoiceInline(admin.TabularInline):
     model = Choice
     extra = 3
